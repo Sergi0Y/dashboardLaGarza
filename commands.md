@@ -11,7 +11,7 @@
 
 
 
-###git commit -m
+### git commit -m
 
 ------------
 &bull; Sirve para comentar, el comando original es git commit a secas pero con el -m (después de la "m", va un espacio y luego las comillas) sirve para poner una descripción del comentario entre comillas (""), yo tengo un modo para escribir los comandos donde escribo de forma super breve que hice (si fue que agregué algo "ADD" o borré algo "DELETE" o hice algun cambio "UPDATE" o en realidad cualquier palabra que sirva para identificar de forma simple y rapida el cambio realizado) ejemplo:
