@@ -233,3 +233,30 @@ input[type="submit"]:hover{
 .fa fa-sign-out{
     color: red;
 }
+section{
+    display: flex;
+    width: 800px;
+    height: 430px;
+    border: 1px solid red;
+}
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.galeria{
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    margin-left: 250px;
+}
