@@ -226,3 +226,11 @@ input[type="submit"]:hover{
 .signup_link a:hover{
     text-decoration: underline;
 }
+
+
+
+
+/* DASHBOARD */
+.fa fa-sign-out{
+    color: red;
+}
