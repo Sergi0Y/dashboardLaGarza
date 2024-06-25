@@ -206,6 +206,7 @@ input[type="submit"]{
     font-weight: 700;
     cursor: pointer;
     outline: none;
+    margin-bottom: 10px;
 }
 input[type="submit"]:hover{
     border-color: #2691d9;
