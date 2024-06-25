@@ -5,95 +5,41 @@
     <!-- CSS FILE -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="loginStyles.css" />
-    <link rel="shortcut icon" href="images/garza.svg"> 
+    <link rel="shortcut icon" href="images/garza.svg" />
     <!---ICON STYLE---->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
-  <body style="background-color: green;">
-    <!--menu btn-->
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="side-bar">
-      <!--header section-->
-      <header>
-        <!--close btn-->
-        <div class="close-btn">
-          <i class="fas fa-times"></i>
-        </div>
-        <!--img-->
-        <img src="/images/la.png" alt="" />
-        <!--logo-->
-        <h1>Logo Here</h1>
-      </header>
-
-      <!--menu items-->
-      <div class="menu">
-        <div class="item">
-          <a href=""><i class="fas fa-desktop"></i>Dashboard</a>
-        </div>
-        <div class="item">
-          <a class="sub-btn"
-            ><i class="fas fa-table"></i>Tables
-            <!--dropdown-->
-            <!--dropdown arrow-->
-            <i class="fas fa-angle-right dropdown"></i>
-          </a>
-          <div class="sub-menu">
-            <a href="" class="sub-item">Sub menu 01</a>
-            <a href="" class="sub-item">Sub menu 02</a>
-            <a href="" class="sub-item">Sub menu 03</a>
-          </div>
-        </div>
-        <div class="item">
-          <a href=""><i class="fas fa-th"></i>Forms</a>
-        </div>
-        <div class="item">
-          <a class="sub-btn"
-            ><i class="fas fa-cog"></i>Settings
-            <!--dropdown-->
-            <!--dropdown arrow-->
-            <i class="fas fa-angle-right dropdown"></i>
-          </a>
-          <div class="sub-menu">
-            <a href="" class="sub-item">Sub item 01</a>
-            <a href="" class="sub-item">Sub item 02</a>
-            <a href="" class="sub-item">Sub item 03</a>
-          </div>
-        </div>
-        <div class="item">
-          <a href=""><i class="fas fa-info-circle"></i>About</a>
-        </div>
-      </div>
-    </div>
-
+  <body style="background-color: green">
     <!--Desde aquí empiezo el código-->
     <!-- login -->
 
-    <div class="center">  <!-- PURPLE -->
+    <div class="center">
+      <!-- PURPLE -->
       <h1>Login</h1>
       <div class="img-container">
-        <img src="/images/user.svg" class="icon" alt="usuario">
+        <img src="/images/user.svg" class="icon" alt="usuario" />
       </div>
       <form method="post">
         <div class="txt_field">
-          <input type="text" required>
+          <input type="text" required />
           <span></span>
           <label>Username</label>
         </div>
         <div class="txt_field">
-          <input type="password" required>
+          <input type="password" required />
           <span></span>
           <label>Password</label>
         </div>
         <!-- <div class="pass">Forgot Password?</div> -->
-        <input type="submit" value="Login" class="btnLogin">
+        <div class="btn-container">
+          <a href="dashboard.html" class="btn-redir">Login</a>
+        </div>
 
         <div class="img-container">
-          <img src="/images/garza.svg" alt="la garza" class="icon" id="garza">
+          <img src="/images/garza.svg" alt="la garza" class="icon" id="garza" />
         </div>
         <!-- <div class="signup_link">
           Not a member? <a href="#">Regístrate
@@ -101,29 +47,5 @@
         </div> -->
       </form>
     </div>
-
-    <!--Jquery CDN link-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function(){
-        //jquery for expand and collapse the sidebar
-        $(".menu-btn").click(function () {
-          $(".side-bar").addClass("active");
-          $(".menu-btn").css("visibility", "hidden");
-        });
-        //for close btn
-        $(".close-btn").click(function () {
-          $(".side-bar").removeClass("active");
-          $(".menu-btn").css("visibility", "visible");
-        });
-        //jquery for toggle sub menus
-        $(".sub-btn").click(function () {
-          $(this).next(".sub-menu").slideToggle();
-          $(this).find(".dropdown").toggleClass("rotate");
-        });
-      });
-    </script>
   </body>
 </html>
-
