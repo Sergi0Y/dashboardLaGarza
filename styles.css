@@ -15,6 +15,9 @@ body{
 }
 
 .side-bar{
+    border:1px solid red;
+}
+.side-bar{
 background: #1b1b1b;    
 width: 250px;
 height: 1000vh;
@@ -232,4 +235,14 @@ input[type="submit"]:hover{
 /* DASHBOARD */
 .fa fa-sign-out{
     color: red;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    margin-left: 65px;    
+    height: 100%;
+    background: white;
+    color: black;
+    border: 1px solid white;
 }
