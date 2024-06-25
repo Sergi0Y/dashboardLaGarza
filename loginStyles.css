@@ -1,17 +1,14 @@
 .center{
-    background-color: purple;
-    
+    background-color: green;
 }
-
 .img-container{
     /* background-color: aquamarine;
-    border: 1px solid yellow; */
+    border: 1px solid yellow;  */
     display: flex;
     justify-content: center;
 }
 .icon{
     height:100px;
-    
 }
 #garza{
     margin-bottom: 5px;
@@ -43,6 +40,7 @@
     text-decoration: underline;
 }
 .btn-redir:hover{
-    border-color: #2691d9;
+    /* border-color: #2691d9; */
+    border-color: red;
     transition: .5s;
 }
