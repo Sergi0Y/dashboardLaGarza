@@ -20,10 +20,6 @@
     <div class="side-bar">
       <!--header section-->
       <header>
-        <!--close btn-->
-        <div class="close-btn">
-          <i class="fas fa-times"></i>
-        </div>
         <!--img-->
         <img src="/images/la.png" alt="" />
         <!--logo-->
@@ -94,7 +90,7 @@
 
     <script>
       $(document).ready(function(){
-        //jquery for expand and collapse the sidebar
+/*         //jquery for expand and collapse the sidebar
         $(".menu-btn").click(function () {
           $(".side-bar").addClass("active");
           $(".menu-btn").css("visibility", "hidden");
@@ -103,7 +99,7 @@
         $(".close-btn").click(function () {
           $(".side-bar").removeClass("active");
           $(".menu-btn").css("visibility", "visible");
-        });
+        }); */
         //jquery for toggle sub menus
         $(".sub-btn").click(function () {
           $(this).next(".sub-menu").slideToggle();
