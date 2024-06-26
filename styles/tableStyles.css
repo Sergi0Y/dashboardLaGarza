@@ -46,6 +46,14 @@ main{
     display: flex;
     justify-content: center;
 }
+.cont-botones{
+    position: absolute;
+    margin-top: 200px;
+    border: 1px solid magenta;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
 table {
     width: 100%;
     border-collapse: collapse;
