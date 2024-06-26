@@ -1,6 +1,9 @@
 body{
     background-color: white;
     font-family: montserrat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .cont-table{
     display: flex;
@@ -9,13 +12,34 @@ body{
     border: 1px solid green;
 }
 header{
+    position: relative;
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 1px solid pink;
+}
+header h1{
+    border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .boton{
-    display: flex;
-    justify-content: right;
+    position: absolute;
+    left: 95%;
+    transform: translateX(-100%);
     border: 1px solid green;
+    background: #327634;
+    border-radius: 10px;
+    color: #ffffff;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+.boton:hover{
+    background: #4CAF50;
+    transition: .5s;
 }
 main{
     border: 1px solid red;
