@@ -3,8 +3,9 @@
   <head>
     <title>Login La Garza</title>
     <!-- CSS FILE -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="loginStyles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/loginStyles.css" />
+
 
     <link rel="shortcut-icon" href="images/garza.svg" />
 
@@ -13,6 +14,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script>
+      function handleSubmit(event) {
+          event.preventDefault(); // Evita el envío del formulario por defecto
+
+          // Obtener los valores de los campos de texto
+          const username = document.querySelector('input[type="text"]').value;
+          const password = document.querySelector('input[type="password"]').value;
+
+          // Verificar que los campos no estén vacíos
+          if (username && password) {
+              // Redirigir a otra página HTML
+              window.location.href = 'dashboard.html';
+          } else {
+              // Mostrar un mensaje de error si es necesario
+              alert('Por favor, ingrese tanto el nombre de usuario como la contraseña.');
+          }
+      }
+  </script>
   </head>
   <body>
     <!--Desde aquí empiezo el código-->
@@ -24,7 +43,7 @@
       <div class="img-container">
         <img src="/images/user.svg" class="icon" alt="usuario" />
       </div>
-      <form method="post">
+      <form method="post" onsubmit="handleSubmit(event)">
         <div class="txt_field">
           <input type="text" required />
 
@@ -42,9 +61,7 @@
         <div class="btn-container">
           <a href="dashboard.html" class="btn-redir">Login</a>
         </div>    
-        <!-- <input type="submit" class="btn-container" value="asdsd" /><a
-          href="dashboard.html"
-        ></a> -->
+        <input type="submit" class="btn-container" value="Login"><a href="dashboard.html"></a>
 
         <div class="img-container">
           <img src="/images/garza.svg" alt="la garza" class="icon" id="garza" />
