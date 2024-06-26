@@ -2,14 +2,22 @@ body{
     background-color: white;
     font-family: montserrat;
 }
-.contenedor{
+.cont-table{
     display: flex;
     justify-content: center;
     width: 50%;
     border: 1px solid green;
 }
-
-.supercontenedor{
+header{
+    display: flex;
+    justify-content:center;
+}
+.boton{
+    display: flex;
+    justify-content: right;
+    border: 1px solid green;
+}
+main{
     border: 1px solid red;
     display: flex;
     justify-content: center;
