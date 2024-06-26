@@ -6,20 +6,28 @@
 }
 
 body{
-    background: #e0ffba;
+    background: #1b1a1b;
     color: #ffffff;
     display: flex;
 }
 
 .side-bar{
-    background: #1b1b1b;    
-    width: 19%;
-    height: auto;
-   }
-   .side-bar::-webkit-scrollbar {
-     width: 0px;
-   }
+ /* background: #1b1a1b;
+ backdrop-filter: blur(15px);
+ min-width: 250px;
+ height: max-content;
+ top: 0;
+ overflow-y: auto; */
+border: 2px solid white;
+ background-color: #1b1a1b;
+    min-width: 250px;
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+    
 
+}
+.side-bar::-webkit-scrollbar {
+  width: 0px;
+}
 .side-bar.active{
     left: 0;
 }
@@ -28,7 +36,7 @@ header{
     background: #33363a;
     justify-content: center;
     display: block;
-    width: 250px;
+    
 }
 
 header img{
@@ -211,29 +219,27 @@ input[type="submit"]:hover{
     text-decoration: underline;
 }
 
-
-
 /* DASHBOARD */
-.fa fa-sign-out{
-    color: red;
-}
-
-
 .content{
     display: block;
-    justify-content: center;
-    height: au;
-    width: auto;
+    height: max-content;
     background: palegreen;
     color: black;
-    border: 1px solid yellow;
+    border: 3px solid green;
     padding: 5px;
+    margin-right: 0;
 }
 .imagen{
-    width: 300px;
+    width: 290px;
 }
 .container-head{
     border: 2px solid blue;
     width: auto;
-    
+    color: white;
+}
+.container {
+    display: flex;
+    border: 1px solid red;
+    height: 100vh; /* 100% del viewport height */
+    width: 1000vh;
 }
