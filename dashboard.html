@@ -1,95 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sidebar menu</title>
     <!-- CSS FILE -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="loginStyles.css" />
-    <link rel="shortcut icon" href="images/garza.svg" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/loginStyles.css" />
+    <link rel="shortcut icon" href="images/garza.svg"> 
     <!---ICON STYLE---->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
-  <body style="background-color: green">  
-    <main class="container">
-      <div class="side-bar">  <!-- SIDEBAR -->
-        <!--header section-->
-        <header class="header-sidebar">
-          <!--close btn-->
-          <!-- <div class="close-btn">
-            <i class="fas fa-times"></i>
-          </div> -->
-          <!--img-->
-          <img src="/images/la.png" alt="" />
-          <!--logo-->
-          <h1>Logo Here</h1>
-        </header>
-  
-        <!--menu items-->
-        <div class="menu" >
-          <div class="item">
-            <a href=""><i class="fas fa-desktop"></i>Dashboard</a>
-          </div>
-          <div class="item">
-            <a class="sub-btn"
-              ><i class="fas fa-table"></i>Perfilamiento
-              <!--dropdown-->
-              <!--dropdown arrow-->
-              <i class="fas fa-angle-right dropdown"></i>
-            </a>
-            <div class="sub-menu">
-              <a href="" class="sub-item">Sub menu 01</a>
-              <a href="" class="sub-item">Sub menu 02</a>
-              <a href="" class="sub-item">Sub menu 03</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#"><i class="fa fa-users"></i>Gestión</a>
-          </div>
-          <div class="item">
-            <a class="sub-btn"
-              ><i class="fas fa-cog"></i>Mantenedores
-              <!--dropdown-->
-              <!--dropdown arrow-->
-              <i class="fas fa-angle-right dropdown"></i>
-            </a>
-            <div class="sub-menu">
-              <a href="#" class="sub-item">Sub item 01</a>
-              <a href="#" class="sub-item">Sub item 02</a>
-              <a href="#" class="sub-item">Sub item 03</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#"><i class="fa fa-braille"></i>Control de puestos</a>
-          </div>
-          <div class="item">
-              <a href="index.html"><i class="fa fa-sign-out"></i>Logout</a>
-            </div>
+  <body style="background-color: green;">
+    <!--menu btn-->
+    <div class="menu-btn" >
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+      <!--header section-->
+      <header>
+        <!--close btn-->
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
         </div>
-      </div>
-      <!-- <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis eleifend turpis. Aliquam vehicula erat eu tortor placerat scelerisque. Duis varius, erat convallis euismod cursus, turpis erat tempus diam, nec elementum turpis massa nec orci. Duis imperdiet, arcu vitae viverra egestas, purus nisi tempor enim, ullamcorper consectetur urna purus quis nisl. Fusce sed porta ante. In placerat eu nisl vitae hendrerit. Nulla eu turpis mi. Sed eu magna velit. Quisque felis sem, semper at tellus sit amet, hendrerit eleifend velit. Pellentesque rutrum lacinia pretium. Suspendisse ultricies tellus lorem, nec laoreet sapien facilisis in.
+        <!--img-->
+        <img src="/images/la.png" alt="" />
+        <!--logo-->
+        <h1>Logo Here</h1>
+      </header>
 
-          Sed auctor lacus eu congue vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque sit amet scelerisque est. Donec est dolor, ullamcorper commodo ultricies quis, ultrices ac tortor. Morbi ac ornare metus. Fusce rutrum, diam at volutpat imperdiet, mauris elit vehicula mi, sed scelerisque urna arcu vitae libero. Curabitur cursus, tortor eget feugiat ornare, nisi eros consectetur risus, a porta est enim ullamcorper odio. Fusce enim dui, congue at tempus in, mollis ac diam. Nullam consequat nisl sed sapien auctor, at congue nulla vestibulum. Donec eget augue nec risus volutpat ultricies.
-          
-          Phasellus massa elit, vestibulum eu ex non, vestibulum blandit est. Pellentesque semper quis urna lacinia luctus. Maecenas id dolor tempor, feugiat mi non, placerat mi. Pellentesque a risus vitae ante dictum dapibus quis at turpis. Morbi vel venenatis nibh. Curabitur vel nisi augue. Morbi condimentum sollicitudin metus eget mattis. Pellentesque maximus, augue in euismod viverra, urna ligula ornare neque, finibus luctus eros purus vitae odio. Phasellus ac quam et mi cursus tristique. Donec porta dolor et suscipit vehicula. Morbi sit amet tincidunt turpis, at accumsan ligula. Fusce sed nibh id justo molestie lacinia. Curabitur turpis lacus, tristique iaculis interdum eget, ultrices eu nisl. Pellentesque mattis condimentum arcu, in elementum libero sollicitudin dignissim. Integer elit erat, molestie ac vestibulum eu, euismod a ante.
-          
-          Etiam non imperdiet nulla. Aenean commodo tristique nulla, eu posuere justo elementum quis. Nulla sodales iaculis pretium. In a euismod augue. Praesent volutpat, mi vitae egestas gravida, turpis augue aliquet massa, vitae mattis nisi sem a massa. Duis eget metus euismod, ullamcorper mauris sed, tempus tellus. Cras aliquet velit nunc, eget porttitor sapien commodo quis. Mauris aliquam justo vel diam tempus, vel interdum nisi mattis. Pellentesque quis mi nibh. Integer gravida semper justo, vitae lacinia ipsum pretium nec. Vestibulum tincidunt mi congue lacus hendrerit mattis sed ut sem. Morbi ullamcorper faucibus elit, consequat pellentesque turpis pretium et. Aliquam gravida rhoncus posuere.
-          
-          Donec sem massa, fermentum sit amet vestibulum quis, aliquet sed mi. Nam vel mi ut mi efficitur bibendum. Nunc efficitur vulputate ultrices. Quisque tristique ligula urna, quis aliquam mauris auctor sed. Duis vel lorem vitae diam semper convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse luctus, sapien vel hendrerit luctus, nisi nibh blandit tortor, eu sodales nulla quam non tellus. In pellentesque diam ante, id vulputate dolor placerat at. Praesent facilisis sagittis nisl, eget tempus mauris fringilla vitae. Sed ullamcorper mi sed enim mollis, in aliquam risus tempus. Aliquam velit velit, condimentum ut turpis sit amet, euismod tincidunt nisi. Phasellus eleifend tellus vitae erat ullamcorper ornare.</p>
-      </div> -->
+      <!--menu items-->
+      <div class="menu" >
+        <div class="item">
+          <a href=""><i class="fas fa-desktop"></i>Dashboard</a>
+        </div>
+        <div class="item">
+          <a class="sub-btn">
+            <i class="fas fa-table"></i>Tables
+            <!--dropdown-->
+            <!--dropdown arrow-->
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="table.html" class="sub-item">Sub menu 01</a>
+            <a href="" class="sub-item">Sub menu 02</a>
+            <a href="" class="sub-item">Sub menu 03</a>
+          </div>
+        </div>
+        <div class="item">
+          <a href=""><i class="fas fa-th"></i>Forms</a>
+        </div>
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-cog"></i>Settings
+            <!--dropdown-->
+            <!--dropdown arrow-->
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="" class="sub-item">Sub item 01</a>
+            <a href="" class="sub-item">Sub item 02</a>
+            <a href="" class="sub-item">Sub item 03</a>
+          </div>
+        </div>
+        <div class="item">
+          <a href=""><i class="fas fa-info-circle"></i>About</a>
+        </div>
+        <div class="item">
+            <a href="index.html"><i class="fa fa-sign-out"></i>Logout</a>
+          </div>
+      </div>
+    </div>
+    <main class="content">
+      <div class="galeria">
+        <section>
+          <img src="/images/veg2.jpg">
+          <img src="/images/veg1.jpg">
+          <img srsc="/images/pes1.jpeg">
+          <img src="/images/frut1.jpeg">
+          <img src="/images/hac1.jpeg">
+        </section>
+      </div>
     </main>
 
-
+<!--     <div class="center">
+        <p>texto del dashboard</p>
+    </div> -->
 
 
     <!--Jquery CDN link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
-      $(document).ready(function () {        
+      $(document).ready(function(){
+        //jquery for expand and collapse the sidebar
+        $(".menu-btn").click(function () {
+          $(".side-bar").addClass("active");
+          $(".menu-btn").css("visibility", "hidden");
+        });
+        //for close btn
+        $(".close-btn").click(function () {
+          $(".side-bar").removeClass("active");
+          $(".menu-btn").css("visibility", "visible");
+        });
         //jquery for toggle sub menus
         $(".sub-btn").click(function () {
           $(this).next(".sub-menu").slideToggle();
@@ -99,3 +113,4 @@
     </script>
   </body>
 </html>
+

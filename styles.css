@@ -8,22 +8,15 @@
 
 
 body{
-    min-height: 100vh;
     background: #e0ffba;
     color: #ffffff;
-    background-size: cover;
-    background-position: center;
+    display: flex;
 }
 
 .side-bar{
     background: #1b1b1b;    
     width: 19%;
     height: auto;
-    top: 0;
-    overflow-y: auto;
-    transition: 0.6s ease;
-
-    overflow-y: auto;
    }
    .side-bar::-webkit-scrollbar {
      width: 0px;
@@ -35,6 +28,9 @@ body{
 
 header{
     background: #33363a;
+    justify-content: center;
+    display: block;
+    width: 250px;
 }
 
 header img{
@@ -43,15 +39,6 @@ margin: 15px;
 margin-left: 70px;
 border-radius: 50%;
 border: 3px solid #b4b8b9;
-}
-
-.close-btn{
-    position: absolute;
-    color: #fff;
-    font-size: 23px;
-    right: 0;
-    margin: 15px;
-    cursor: pointer;
 }
 
 header h1{
@@ -233,19 +220,34 @@ input[type="submit"]:hover{
     color: red;
 }
 
-.container{
-    background-color: red;
+.main2{
+    /* background-color: red;
     width: auto;
     height: auto;
-    display: flex;    
-}
-.content{
+    display: flex; 
+     */ 
     display: flex;
-  justify-content: center;
-  padding-left: 15%;    
-  width: max-content;
-  height: max-content;
-  background: palegreen;
-  color: black;
-  border: 1px solid white;
+    justify-content: center;
+    margin-left: 15%;    
+    height: 100%;
+    background-color: red;
+    border: 1px solid Red;   
+}
+.main1{
+    margin-left: 15%;    
+    border: 1px solid yellow;
+    justify-content: center;
+}
+
+.content{
+    display: block;
+    justify-content: center;
+    height: au;
+    width: auto;
+    background: palegreen;
+    color: black;
+    border: 1px solid white;
+}
+.imagen{
+    width: 300px;
 }
