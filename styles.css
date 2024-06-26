@@ -5,8 +5,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-
-
 body{
     background: #e0ffba;
     color: #ffffff;
@@ -220,24 +218,6 @@ input[type="submit"]:hover{
     color: red;
 }
 
-.main2{
-    /* background-color: red;
-    width: auto;
-    height: auto;
-    display: flex; 
-     */ 
-    display: flex;
-    justify-content: center;
-    margin-left: 15%;    
-    height: 100%;
-    background-color: red;
-    border: 1px solid Red;   
-}
-.main1{
-    margin-left: 15%;    
-    border: 1px solid yellow;
-    justify-content: center;
-}
 
 .content{
     display: block;
@@ -246,8 +226,14 @@ input[type="submit"]:hover{
     width: auto;
     background: palegreen;
     color: black;
-    border: 1px solid white;
+    border: 1px solid yellow;
+    padding: 5px;
 }
 .imagen{
     width: 300px;
+}
+.container-head{
+    border: 2px solid blue;
+    width: auto;
+    
 }
