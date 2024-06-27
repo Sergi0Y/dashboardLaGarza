@@ -6,7 +6,7 @@
     <!-- CSS FILE -->
     <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="stylesheet" href="/styles/tableStyles.css" />
-    
+
     <link rel="shortcut icon" href="images/garza.svg" />
 
     <!---ICON STYLE---->
@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <!-- SIDEBAR -->
       <div class="side-bar">
         <!--header section-->
@@ -28,7 +28,7 @@
           <!--img-->
           <img src="/images/la.png" alt="" />
           <!--logo-->
-          <h2>Logo Here</h2>
+          <h2>Username</h2>
         </header>
 
         <!--menu items-->
@@ -73,56 +73,58 @@
           </div>
         </div>
       </div>
-      <main class="content" >
-                
-          <!-- RED -->
-          <header class="table-header" >
-            <!-- PINK -->
-            <h1>Accionistas</h1>          
-            <div class="boton">
-              <p>Descargar</p>
-            </div>
-          </header>          
-        
+      <div class="content">
+        <header class="table-header">
+          <h1>Accionistas</h1>
+          <div class="boton">
+            <p>Descargar</p>
+          </div>
+        </header>
+
         <div class="table-main">
           <div class="cont-table">
-              <table>
-                  <thead>
-                      <tr>
-                          <th>Número</th>
-                          <th>Rut</th>
-                          <th>Accionista</th>
-                          <th>Fecha Inicio</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>25</td>
-                          <td>Madrid</td>
-                          <td>24/01/2019</td>
-                      </tr>
-                      <tr>
-                          <td>2</td>
-                          <td>30</td>
-                          <td>Barcelona</td>
-                          <td>17/05/2021</td>
-                      </tr>
-                      <tr>
-                          <td>3</td>
-                          <td>28</td>
-                          <td>Valencia</td>
-                          <td>03/02/2023</td>
-                      </tr>
-                  </tbody>
-              </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>Número</th>
+                  <th>Rut</th>
+                  <th>Accionista</th>
+                  <th>Fecha Inicio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>25</td>
+                  <td>Madrid</td>
+                  <td>24/01/2019</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>30</td>
+                  <td>Barcelona</td>
+                  <td>17/05/2021</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>28</td>
+                  <td>Valencia</td>
+                  <td>03/02/2023</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-      </div>
-      </main>
-    </div>
-    <!--     <div class="center">
-        <p>texto del dashboard</p>
-    </div> -->
+          <div class="cont-botones">
+            <div class="botoncitos">
+              <i class="fa fa-arrow-left" aria-hidden="false"></i>
+              <i class="fa fa-refresh" aria-hidden="true"></i>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        </div>
+       
+    </main>
 
     <!--Jquery CDN link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

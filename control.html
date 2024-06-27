@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sidebar menu</title>
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/tableStyles.css" />
+
+    <link rel="shortcut icon" href="images/garza.svg" />
+
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+
+    <!---ICON STYLE---->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <!-- SIDEBAR -->
+      <div class="side-bar">
+        <!--header section-->
+        <header class="header-sidebar">
+          <!--close btn-->
+          <!-- <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div> -->
+          <!--img-->
+          <img src="/images/la.png" alt="" />
+          <!--logo-->
+          <h2>Username</h2>
+        </header>
+
+        <!--menu items-->
+        <div class="menu">
+          <div class="item">
+            <a href="dashboard.html"><i class="fas fa-desktop"></i>Dashboard</a>
+          </div>
+          <div class="item">
+            <a class="sub-btn"
+              ><i class="fas fa-table"></i>Perfilamiento
+              <!--dropdown-->
+              <!--dropdown arrow-->
+              <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+              <a href="table.html" class="sub-item">Sub menu 01</a>
+              <a href="" class="sub-item">Sub menu 02</a>
+              <a href="" class="sub-item">Sub menu 03</a>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#"><i class="fa fa-users"></i>Gestión</a>
+          </div>
+          <div class="item">
+            <a class="sub-btn"
+              ><i class="fas fa-cog"></i>Mantenedores
+              <!--dropdown-->
+              <!--dropdown arrow-->
+              <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub item 01</a>
+              <a href="#" class="sub-item">Sub item 02</a>
+              <a href="#" class="sub-item">Sub item 03</a>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#"><i class="fa fa-braille"></i>Control de puestos</a>
+          </div>
+          <div class="item">
+            <a href="index.html"><i class="fa fa-sign-out"></i>Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+      <!--   <header class="table-header">
+          <h1>Accionistas</h1>
+          <div class="boton">
+            <p>Descargar</p>
+          </div>
+        </header>   -->      
+              
+                  <style type="text/tailwindcss">
+                      @layer base {
+                          :root {
+                              --background: 0 0% 100%;
+          --foreground: 240 10% 3.9%;
+          --card: 0 0% 100%;
+          --card-foreground: 240 10% 3.9%;
+          --popover: 0 0% 100%;
+          --popover-foreground: 240 10% 3.9%;
+          --primary: 240 5.9% 10%;
+          --primary-foreground: 0 0% 98%;
+          --secondary: 240 4.8% 95.9%;
+          --secondary-foreground: 240 5.9% 10%;
+          --muted: 240 4.8% 95.9%;
+          --muted-foreground: 240 3.8% 46.1%;
+          --accent: 240 4.8% 95.9%;
+          --accent-foreground: 240 5.9% 10%;
+          --destructive: 0 84.2% 60.2%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 5.9% 90%;
+          --input: 240 5.9% 90%;
+          --ring: 240 5.9% 10%;
+          --radius: 0.5rem;
+                          }
+                          .dark {
+                              --background: 240 10% 3.9%;
+          --foreground: 0 0% 98%;
+          --card: 240 10% 3.9%;
+          --card-foreground: 0 0% 98%;
+          --popover: 240 10% 3.9%;
+          --popover-foreground: 0 0% 98%;
+          --primary: 0 0% 98%;
+          --primary-foreground: 240 5.9% 10%;
+          --secondary: 240 3.7% 15.9%;
+          --secondary-foreground: 0 0% 98%;
+          --muted: 240 3.7% 15.9%;
+          --muted-foreground: 240 5% 64.9%;
+          --accent: 240 3.7% 15.9%;
+          --accent-foreground: 0 0% 98%;
+          --destructive: 0 62.8% 30.6%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 3.7% 15.9%;
+          --input: 240 3.7% 15.9%;
+          --ring: 240 4.9% 83.9%;
+                          }
+                      }
+                  </style>
+            </head>
+            
+              <div class="bg-card text-card-foreground min-h-screen p-4" style="background-color:lightgreen">
+            <div class="bg-primary text-primary-foreground p-4 rounded-t-lg" >
+              <span class="font-bold">Configurador</span>
+              <span class="ml-4 text-muted-foreground">Días activos</span>
+            </div>
+            <div class="bg-card p-4 rounded-b-lg shadow-md" style="background-color:darkolivegreen">
+              <div class="grid grid-cols-12 gap-2">
+                <div class="col-span-12 flex justify-center space-x-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">303</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">302</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">301</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">193</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">192</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">191</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">190</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">189</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">188</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">187</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">186</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">185</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">184</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">183</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">E03</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">E04</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">201</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">215</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">216</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">217</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">218</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">219</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">220</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">221</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">222</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">223</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">222</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">223</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">224</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">225</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">226</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">227</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">228</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">229</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">230</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">231</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">232</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">233</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">234</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">235</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">236</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">237</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">E05</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">66</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">65</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">64</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">63</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">62</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">61</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">60</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">59</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">58</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">57</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">56</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">55</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">54</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">53</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">52</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">51</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">50</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">49</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">48</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">47</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">46</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">45</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">44</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">43</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">42</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                 
+                  
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">35</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">34</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">33</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">32</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">31</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">30</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">29</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">28</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">27</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">26</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">25</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">24</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">23</div>        
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">18</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">17</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">16</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">15</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">14</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">13</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">12</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">11</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">10</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">9</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">8</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">7</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">6</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">5</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">4</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">3</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">2</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">1</div>
+                </div>
+          
+                <div class="col-span-12 flex justify-center space-x-2 mt-2">
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">81</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">80</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">79</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">78</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">77</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">76</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">75</div>
+                                 
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">65</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">64</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">63</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">62</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">61</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">60</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">59</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">58</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">57</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">56</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">55</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">54</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">53</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">52</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">51</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">50</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">49</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">48</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">47</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">46</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">45</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">44</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">43</div>
+                  <div class="bg-secondary text-secondary-foreground p-2 rounded">42</div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          
+      </div>
+    </main>
+
+    <!--Jquery CDN link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        /* //jquery for expand and collapse the sidebar
+        $(".menu-btn").click(function () {
+          $(".side-bar").addClass("active");
+          $(".menu-btn").css("visibility", "hidden");
+        });
+        //for close btn
+        $(".close-btn").click(function () {
+          $(".side-bar").removeClass("active");
+          $(".menu-btn").css("visibility", "visible");
+        }); */
+        //jquery for toggle sub menus
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+    </script>
+  </body>
+</html>
