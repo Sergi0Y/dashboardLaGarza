@@ -12,18 +12,33 @@ body{
     border: 1px solid green;
 }
 header{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+    text-align: center;
     border: 1px solid pink;
+    
 }
+.arreglo{
+    height: 30px;
+    border: 1px solid turquoise;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    align-items: center;
+    background: rgb(175, 215, 115);
+}
+.arreglo p{
+    margin: 0;
+}
+
+.arreglo i{
+    max-height: 50px;
+    margin-right: 20px;
+}
+
 header h1{
     border: 1px solid black;
-    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+/*  position: absolute;
+    transform: translateX(-50%); */
 }
 .boton{
     position: absolute;
