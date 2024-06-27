@@ -1,54 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla chingona</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sidebar menu</title>
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="stylesheet" href="/styles/tableStyles.css" />
-</head>
-<body>
-    <header>
-        <h1>Accionistas</h1>
-        <div class="boton">
-            <p>Descargar</p>
+    
+    <link rel="shortcut icon" href="images/garza.svg" />
+
+    <!---ICON STYLE---->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- SIDEBAR -->
+      <div class="side-bar">
+        <!--header section-->
+        <header class="header-sidebar">
+          <!--close btn-->
+          <!-- <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div> -->
+          <!--img-->
+          <img src="/images/la.png" alt="" />
+          <!--logo-->
+          <h2>Logo Here</h2>
+        </header>
+
+        <!--menu items-->
+        <div class="menu">
+          <div class="item">
+            <a href="dashboard.html"><i class="fas fa-desktop"></i>Dashboard</a>
+          </div>
+          <div class="item">
+            <a class="sub-btn"
+              ><i class="fas fa-table"></i>Perfilamiento
+              <!--dropdown-->
+              <!--dropdown arrow-->
+              <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+              <a href="table.html" class="sub-item">Sub menu 01</a>
+              <a href="" class="sub-item">Sub menu 02</a>
+              <a href="" class="sub-item">Sub menu 03</a>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#"><i class="fa fa-users"></i>Gestión</a>
+          </div>
+          <div class="item">
+            <a class="sub-btn"
+              ><i class="fas fa-cog"></i>Mantenedores
+              <!--dropdown-->
+              <!--dropdown arrow-->
+              <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub item 01</a>
+              <a href="#" class="sub-item">Sub item 02</a>
+              <a href="#" class="sub-item">Sub item 03</a>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#"><i class="fa fa-braille"></i>Control de puestos</a>
+          </div>
+          <div class="item">
+            <a href="index.html"><i class="fa fa-sign-out"></i>Logout</a>
+          </div>
         </div>
-    </header>
-    <main>
-        <div class="cont-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Número</th>
-                        <th>Rut</th>
-                        <th>Accionista</th>
-                        <th>Fecha Inicio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>25</td>
-                        <td>Madrid</td>
-                        <td>24/01/2019</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>30</td>
-                        <td>Barcelona</td>
-                        <td>17/05/2021</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>28</td>
-                        <td>Valencia</td>
-                        <td>03/02/2023</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </main>
+      </div>
+      <main class="content" >
+                
+          <!-- RED -->
+          <header class="table-header" >
+            <!-- PINK -->
+            <h1>Accionistas</h1>          
+            <div class="boton">
+              <p>Descargar</p>
+            </div>
+          </header>          
+        
+        <div class="table-main">
+          <div class="cont-table">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Número</th>
+                          <th>Rut</th>
+                          <th>Accionista</th>
+                          <th>Fecha Inicio</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>25</td>
+                          <td>Madrid</td>
+                          <td>24/01/2019</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>30</td>
+                          <td>Barcelona</td>
+                          <td>17/05/2021</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>28</td>
+                          <td>Valencia</td>
+                          <td>03/02/2023</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      </main>
+    </div>
+    <!--     <div class="center">
+        <p>texto del dashboard</p>
+    </div> -->
 
+    <!--Jquery CDN link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-
-</body>
+    <script>
+      $(document).ready(function () {
+        /* //jquery for expand and collapse the sidebar
+        $(".menu-btn").click(function () {
+          $(".side-bar").addClass("active");
+          $(".menu-btn").css("visibility", "hidden");
+        });
+        //for close btn
+        $(".close-btn").click(function () {
+          $(".side-bar").removeClass("active");
+          $(".menu-btn").css("visibility", "visible");
+        }); */
+        //jquery for toggle sub menus
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+    </script>
+  </body>
 </html>

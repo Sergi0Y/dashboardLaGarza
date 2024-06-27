@@ -1,84 +1,66 @@
+
 <!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="style-test.css">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla chingona</title>
+    <link rel="stylesheet" href="/styles/tableStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+</head>
 <body>
-
-<!-- Sidebar -->
-<div class="side-bar">  
-  <!--header section-->
-  <header class="header-sidebar">
-    <!--close btn-->
-    <!-- <div class="close-btn">
-      <i class="fas fa-times"></i>
-    </div> -->
-    <!--img-->
-    <img src="/images/la.png" alt="" />
-    <!--logo-->
-    <h1>Logo Here</h1>
-  </header>
-
-  <!--menu items-->
-  <div class="menu" >
-    <div class="item">
-      <a href=""><i class="fas fa-desktop"></i>Dashboard</a>
+    <header>
+        <h1>Accionistas</h1>
+        <div class="boton">
+            <p>Descargar</p>
+        </div>
+    </header>
+    <main>
+        <div class="cont-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Rut</th>
+                        <th>Accionista</th>
+                        <th>Fecha Inicio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>25</td>
+                        <td>José Perez</td>
+                        <td>24/01/2019</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>30</td>
+                        <td>Luisa León</td>
+                        <td>17/05/2021</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>28</td>
+                        <td>Valeria Torrejón</td>
+                        <td>03/02/2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cont-botones">
+    <div class="botoncitos">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
     </div>
-    <div class="item">
-      <a class="sub-btn"
-        ><i class="fas fa-table"></i>Perfilamiento
-        <!--dropdown-->
-        <!--dropdown arrow-->
-        <i class="fas fa-angle-right dropdown"></i>
-      </a>
-      <div class="sub-menu">
-        <a href="" class="sub-item">Sub menu 01</a>
-        <a href="" class="sub-item">Sub menu 02</a>
-        <a href="" class="sub-item">Sub menu 03</a>
-      </div>
-    </div>
-    <div class="item">
-      <a href="#"><i class="fa fa-users"></i>Gestión</a>
-    </div>
-    <div class="item">
-      <a class="sub-btn"
-        ><i class="fas fa-cog"></i>Mantenedores
-        <!--dropdown-->
-        <!--dropdown arrow-->
-        <i class="fas fa-angle-right dropdown"></i>
-      </a>
-      <div class="sub-menu">
-        <a href="#" class="sub-item">Sub item 01</a>
-        <a href="#" class="sub-item">Sub item 02</a>
-        <a href="#" class="sub-item">Sub item 03</a>
-      </div>
-    </div>
-    <div class="item">
-      <a href="#"><i class="fa fa-braille"></i>Control de puestos</a>
-    </div>
-    <div class="item">
-        <a href="index.html"><i class="fa fa-sign-out"></i>Logout</a>
-      </div>
-  </div>
-</div>
+        </div>
+    </main>
 
-<!-- Page Content -->
-<div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
-  <h1>My Page</h1>
-</div>
 
-<img src="img_car.jpg" alt="Car" style="width:100%">
-
-<div class="w3-container">
-<h2>Sidebar Navigation Example</h2>
-<p>The sidebar with is set with "style="width:25%".</p>
-<p>The left margin of the page content is set to the same value.</p>
-</div>
-
-</div>
-      
 </body>
 </html>
