@@ -5,12 +5,7 @@ body{
     padding: 0;
     box-sizing: border-box;
   }
-  .cont-table{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    border: 1px solid green;
-  }
+
   /* header h1{
     border: 1px solid black;
     position: absolute;
@@ -27,6 +22,7 @@ body{
       color: #ffffff;
       width: 100px;
       display: flex;
+      padding: 5px;
       height: 50px;
       justify-content: center;
       align-items: center;
@@ -38,43 +34,43 @@ body{
   .content{
     display: block;
     align-items: center;
-    width: 100%;
-    border: 3px solid green;
+    width: 100%;    
     background-color: whitesmoke;
   }
-  .table-header{
-       border: 2px solid blue;
-       padding-left: 0;
+  .tarifa-header{       
        width: 100%;
-       padding-right: 0;
-       height: 100px;
+       background-color: #2b642d;
+       border-top-right-radius: 12px;
+       border-top-left-radius: 12px;      
+       height: 70px;       
        display: flex;
-       align-items: center;
-       background: none;
-       color: black;
+       align-items: center;       
+       color: white;
       
    }
   .table-main{
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     color: black;
   }
   .cont-botones{
     position: absolute;
-    margin-top: 200px;
-    border: 1px solid magenta;
+    margin-top: 200px;    
     width: 100px;
     display: flex;
+    
     justify-content: center;
   }
   table {
     width: 100%;
+    border: 1px solid black;
     border-collapse: collapse;
+
   }
   
   thead {
     background-color: #f2f2f2;
+    
   }
   
   th, td {
@@ -90,5 +86,12 @@ body{
   th {
     background-color: #4CAF50;
     color: white;
+    border-bottom: 1px solid black;
+
+  }  
+  .container-table{
+    color: black;
   }
-  
+  #botomtd{
+    border-bottom: 1px solid black;
+  }
