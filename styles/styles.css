@@ -261,8 +261,7 @@
   .container {
     display: flex;
     height: 100vh; /* 100% del viewport height */
-    width: 1000vh;
-    border: 1px solid yellow;
+    width: 1000vh;    
   }
   
   #test_table{

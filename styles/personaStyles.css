@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     width: 50%;
-    border: 1px solid green;
+    
   }
   /* header h1{
     border: 1px solid black;
@@ -39,11 +39,11 @@ body{
     display: block;
     align-items: center;
     width: 100%;
-    border: 3px solid green;
+    
     background-color: whitesmoke;
   }
   .table-header{
-       border: 2px solid blue;
+       
        padding-left: 0;
        width: 100%;
        padding-right: 0;
@@ -55,10 +55,11 @@ body{
       
    }
   .table-main{
-    border: 1px solid black;
+    
     display: flex;
     justify-content: center;
     color: black;
+    
   }
   .cont-botones{
     position: absolute;
@@ -68,9 +69,10 @@ body{
     display: flex;
     justify-content: center;
   }
-  table {
+  table{
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid black;    
   }
   
   thead {
@@ -91,4 +93,5 @@ body{
     background-color: #4CAF50;
     color: white;
   }
+  
   
